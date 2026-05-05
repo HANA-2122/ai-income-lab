@@ -225,3 +225,9 @@ ai-income-lab/
 - [ワークフロー図解](docs/workflow.md) — 全体の流れと各スクリプトの関係
 - [転用ユースケース集](docs/use_cases.md) — 実際の活用パターン
 - [v2 設計ドキュメント](docs/ai-income-lab-v2.md) — 技術仕様
+
+---
+
+## License
+
+MIT © 2026 [HANA-2122](https://github.com/HANA-2122)
