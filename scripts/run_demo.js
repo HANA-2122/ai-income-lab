@@ -15,6 +15,13 @@ const { spawnSync } = require('child_process');
 const fs   = require('fs');
 const path = require('path');
 
+// package.json からバージョンを読み込む
+const PKG_VERSION = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8')).version;
+  } catch { return '?.?.?'; }
+})();
+
 const ROOT        = path.join(__dirname, '..');
 const INPUT_FILE  = path.join(ROOT, 'input.txt');
 const EXAMPLE_FILE = path.join(ROOT, 'input.example.txt');
@@ -43,7 +50,7 @@ function banner(msg) {
 
 // ── メイン ────────────────────────────────────────────────────
 function main() {
-  banner('AI Income Lab v2.3.9 — 安全版デモ');
+  banner(`AI Income Lab v${PKG_VERSION} — 安全版デモ`);
 
   // input.example.txt の存在確認
   if (!fs.existsSync(EXAMPLE_FILE)) {
