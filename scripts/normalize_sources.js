@@ -30,6 +30,14 @@ const DANGER_RULES = [
   // 既存ペナルティ統合
   { re: /scam|guaranteed.?income|get.?rich.?quick|make.?money.?fast|\$\d+k.?day/i, penalty: 30, label: '誇大収益主張' },
   { re: /fork.only|archive|deprecated|unmaintained/i,            penalty: 10, label: '非推奨/アーカイブ済み' },
+  // 窃盗・不正アクセス・マルウェア系（v2.4.x false positive 対策）
+  { re: /\btheft\b|\bheist\b/i,                                    penalty: 40, label: '窃盗・犯罪事件' },
+  { re: /\bmalicious\b|\bmalware\b/i,                              penalty: 35, label: 'マルウェア・悪意あるコード' },
+  { re: /\bcompromised\b/i,                                        penalty: 30, label: 'セキュリティ侵害' },
+  { re: /\bphishing\b|\brug.?pull\b/i,                             penalty: 35, label: 'フィッシング・ラグプル' },
+  // 金額 + 危険文脈の組み合わせ（収益主張への誤分類を防ぐ）
+  { re: /\$[\d,]+[kKmM]?.{0,40}(?:theft|heist|hack(?!aton)|rug.?pull)/i, penalty: 50, label: '金額+犯罪・詐欺文脈' },
+  { re: /(?:theft|heist|hack(?!aton)|rug.?pull).{0,40}\$[\d,]+[kKmM]?/i, penalty: 50, label: '金額+犯罪・詐欺文脈' },
 ];
 
 // 危険スコアを計算し、ラベルリストを返す
@@ -104,8 +112,10 @@ function calcScore(item) {
   if (/template|library|snippet|tool|kit/i.test(text)) s += 5;
   if (/open.?source|mit.?licens|apache/i.test(text)) s += 3;
 
-  // ── 収益化キーワード ボーナス ─────────────────────────────────
-  if (/monetiz|paid|subscription|revenue|income|pricing|gumroad|shopify|etsy|patreon/i.test(text)) s += 8;
+  // ── 収益化キーワード ボーナス（危険文脈がない場合のみ加点）────────
+  // 窃盗・詐欺・マルウェア文脈での金額表現を収益事例と誤認識しないためのガード
+  const hasDangerCtx = /\b(?:theft|heist|stolen|malicious|malware|compromised|phishing|rug.?pull)\b/i.test(text);
+  if (!hasDangerCtx && /monetiz|paid|subscription|revenue|income|pricing|gumroad|shopify|etsy|patreon/i.test(text)) s += 8;
 
   // ── 安全・良質ワード 追加ボーナス ────────────────────────────
   for (const { re, bonus } of SAFE_BONUSES) {

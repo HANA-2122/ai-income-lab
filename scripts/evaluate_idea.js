@@ -268,6 +268,10 @@ const RED_FLAG_RULES = [
   { key: 'exaggeration_claim',
     re:  /一晩で[爆大]益|claudeに頼むだけで誰でも/,
     label: '誇大表現・即金主張',         blocks_direct: false },
+  // 窃盗・マルウェア・詐欺事件（v2.4.x false positive 対策）
+  { key: 'theft_malware_incident',
+    re:  /\btheft\b|\bheist\b|\bcrypto.?heist\b|\bmalware\b|\brug.?pull\b|\bmalicious.{0,20}(?:package|extension|code|script|npm)\b/i,
+    label: '窃盗・マルウェア・詐欺事件', blocks_direct: true },
 ];
 
 function detectRedFlags(text) {
