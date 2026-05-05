@@ -1,0 +1,117 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "AI架空人格・AIインフルエンサー系",
+      "keywords": [
+        "AI人格", "ai人格", "バーチャル", "インフルエンサー", "キャラクター", "架空",
+        "vtuber", "AI美女", "ai美女", "virtual influencer", "aiキャラ", "ai character",
+        "onlyfans", "AI彼女", "デジタルヒューマン", "fanvue", "substar"
+      ],
+      "transfer_hints": [
+        "人格設定・投稿一貫性チェックCLIツール（Claude Codeで実装可能）",
+        "ファンエンゲージメント分析・コンテンツカレンダー自動生成スクリプト",
+        "架空人格の「設定書」自動生成テンプレート → Claude Code初心者向け教材化"
+      ],
+      "claude_code_angle": "キャラクター設定テンプレートの管理・投稿文トーン一貫性チェックCLIツール",
+      "risk_note": "架空であることの開示義務あり。なりすまし・欺瞞・詐欺に分類されるリスク。成人向けは法規制・プラットフォーム規約で高リスク。"
+    },
+    {
+      "id": 2,
+      "name": "Polymarket / 市場非効率検出系",
+      "keywords": [
+        "polymarket", "予測市場", "prediction market", "市場非効率", "オッズ",
+        "確率ギャップ", "manifold", "kalshi", "電子取引", "クリプト予測",
+        "非効率", "アービトラージ", "機会損失検出"
+      ],
+      "transfer_hints": [
+        "Polymarket公開APIで確率変動をCSV記録・可視化する観察ツール（自動売買なし）",
+        "予測市場の仕組みを解説するClaude Code初心者向けZenn/note記事",
+        "予測確率とニュース記事を照合して乖離アラートを出す分析スクリプト"
+      ],
+      "claude_code_angle": "Polymarket APIラッパー + CSV出力 + Pythonグラフ化の観察ツール（取引なし）",
+      "risk_note": "自動取引Botは規約・法務リスク高。観察・分析ツールとして設計すること。"
+    },
+    {
+      "id": 3,
+      "name": "UGCプラットフォーム量産系",
+      "keywords": [
+        "UGC", "プラットフォーム", "量産", "コンテンツファーム", "content farm",
+        "レビュー量産", "記事量産", "SEO量産", "クローラー", "自動投稿",
+        "bulk content", "ユーザー生成コンテンツ", "コンテンツ大量生成"
+      ],
+      "transfer_hints": [
+        "特定ニッチの高品質FAQ量産 → SEOミニサイト化（ゲームルール・法律・医療等）",
+        "量産コンテンツの品質チェック・重複検出CLIツール",
+        "コンテンツ量産の倫理・品質基準を解説するメディア化"
+      ],
+      "claude_code_angle": "特定ジャンルのFAQ/解説記事をClaude Codeで構造的に生成するスクリプト",
+      "risk_note": "スパムコンテンツ・著作権侵害・Googleペナルティのリスク。量産より品質重視設計が必要。"
+    },
+    {
+      "id": 4,
+      "name": "Claude Code SNS自動化系",
+      "keywords": [
+        "claude code", "sns自動化", "投稿自動", "twitter自動", "x自動",
+        "instagram自動", "スケジュール投稿", "自動投稿", "sns運用自動",
+        "claude api", "anthropic", "コンテンツ自動生成", "投稿文生成"
+      ],
+      "transfer_hints": [
+        "SNS投稿下書き自動生成ツール（人間が確認・手動投稿）",
+        "投稿アイデアCSVからコンテンツカレンダーを自動生成するスクリプト",
+        "「Claude Code × SNS活用」の入門チュートリアル → Zenn/note発信"
+      ],
+      "claude_code_angle": "投稿文の下書き生成・トーン調整CLIツール（自動投稿なし・人間確認前提）",
+      "risk_note": "X/Instagram等の自動投稿規約に注意。大量自動投稿はBAN・アカウント停止リスクあり。"
+    },
+    {
+      "id": 5,
+      "name": "市場・物件・商品スクリーニング系",
+      "keywords": [
+        "物件スクリーニング", "商品スクリーニング", "相場スキャン", "不動産スクリーニング",
+        "株スクリーニング", "転売", "せどり", "価格差", "アービトラージ",
+        "eBay", "メルカリ", "amazon fba", "楽天市場", "相場分析", "マーケットスキャン"
+      ],
+      "transfer_hints": [
+        "特定カテゴリの価格変動を記録・可視化するローカルスクリプト（API利用）",
+        "スクリーニング条件をMarkdownで管理するテンプレートシステム",
+        "「AIを使った市場分析」の入門解説コンテンツ → 投資家向けメディア化"
+      ],
+      "claude_code_angle": "公開APIから価格データを取得・CSV化・異常値アラートを出すスクリプト",
+      "risk_note": "スクレイピング禁止サイトへのアクセスは規約違反。転売は利益相反・税務申告が必要。"
+    },
+    {
+      "id": 6,
+      "name": "AI音楽カタログ販売系",
+      "keywords": [
+        "ai音楽", "ai music", "suno", "udio", "musicfy", "音楽生成",
+        "bgm販売", "ロイヤリティフリー", "spotify配信", "distrokid",
+        "音楽カタログ", "楽曲量産", "ai楽曲", "streaming revenue"
+      ],
+      "transfer_hints": [
+        "特定ジャンルのAI音楽を量産してSpotify/YouTube配信 → Streaming収益",
+        "AI音楽生成プロンプトのテンプレート集 → 販売・GitHub公開",
+        "AI音楽ツール比較・活用解説コンテンツ → SEOメディア化"
+      ],
+      "claude_code_angle": "音楽プロンプト自動生成・ジャンル別バッチ生成スクリプト",
+      "risk_note": "AI生成音楽の著作権帰属は各プラットフォームで異なる。Spotify等の規約確認が必要。"
+    },
+    {
+      "id": 7,
+      "name": "マーケティング / EC運用OS系",
+      "keywords": [
+        "マーケティング自動化", "ec運用", "広告自動化", "roas", "cpa",
+        "メルマガ自動化", "crm", "hubspot", "klaviyo", "shopify",
+        "funnelハック", "リターゲティング", "コンバージョン最適化",
+        "ltvマーケティング", "ec自動化", "広告運用os"
+      ],
+      "transfer_hints": [
+        "EC商品説明文・広告コピーの自動生成CLIツール（Claude Code）",
+        "Googleアナリティクス/Search ConsoleのCSVをClaude Codeで自動解析・レポート化",
+        "「Claude Code × EC/マーケ自動化」入門チュートリアル → Zenn記事"
+      ],
+      "claude_code_angle": "商品説明・広告コピー・メールテンプレートの自動生成バッチスクリプト",
+      "risk_note": "広告自動入稿は各プラットフォームAPIの規約確認が必要。過度な自動化はBAN対象になる場合あり。"
+    }
+  ]
+}

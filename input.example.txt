@@ -1,0 +1,49 @@
+# AI Income Lab — input.example.txt
+# ============================================================
+# 使い方：このファイルをコピーして input.txt として使います
+#
+#   Windows:  copy input.example.txt input.txt
+#   Mac/Linux: cp input.example.txt input.txt
+#
+# その後：npm run demo または npm run daily を実行
+# ============================================================
+# ── 形式 ──────────────────────────────────────────────────
+# 1件ずつ --- で区切る
+# [タイトル] が title として解析される
+# https://... が url として自動検出される
+# transfer_hint: フィールドがあると転用案の精度が上がる
+# 不明な項目は空欄 or 省略OK
+# ============================================================
+
+---
+[n8n-io/self-hosted-ai-starter-kit — AI自動化ワークフローのスターターキット]
+https://github.com/n8n-io/self-hosted-ai-starter-kit
+
+情報源: GitHub (stars: 14756 / forks: 3729)
+概要: n8n公式が提供するセルフホスト型AI自動化ワークフローのオープンソーステンプレート。ローカル環境にAIワークフロー実行基盤を素早くセットアップできる。Dockerベース、MIT系ライセンス、プラットフォーム依存なし。
+収益化の可能性: テンプレート販売（Gumroad・BOOTH）。このスターターキット構造をドメイン特化版に改造して販売。n8n + Claude Code連携ワークフローのコンサル・教材。
+転用できそうな本質: AI自動化ワークフローを「再現可能なスターターキット」として初心者向けにパッケージ化する構造。
+怪しい点・注意点: n8n self-hosted版はDocker環境が必要。クラウド版は有料になりうる。標準リスク水準。
+transfer_hint: AI自動化ワークフローをスターターキットとしてパッケージ化する構造。自分の専門領域（MT5/SEO）に特化したn8n+Claude Codeスターターキットを作りGumroadで販売できる。
+
+---
+[ComposioHQ/awesome-claude-skills — Claude用スキルのキュレーション集]
+https://github.com/ComposioHQ/awesome-claude-skills
+
+情報源: GitHub
+概要: Claude用スキル（.claude/skills/）のキュレーションリスト。Claudeのワークフローをカスタマイズするためのスキル・リソース・ツール集。
+収益化の可能性: 特定ドメイン専用のClaude Codeスキルパックを作って販売・配布。GitHub公開→認知獲得→有料教材誘導。
+転用できそうな本質: Claude用スキルを大量に集めてカタログ化し、用途別に再利用できる知識部品として扱う構造。
+怪しい点・注意点: stars数は要確認。「awesome-」系はキュレーション集で内容の品質にばらつきがある場合あり。
+transfer_hint: Claude用スキルのカタログ構造を研究して、MT5分析スキル・SEO記事チェックスキル・収益化リサーチスキルの独自パックを作る。GitHub公開→Zenn記事→有料教材の収益ファネルを設計できる。
+
+---
+[garrytan/gstack — Claude Codeに複数の専門役割を持たせる23ツール構成]
+https://github.com/garrytan/gstack
+
+情報源: GitHub (keyword: claude code / language: TypeScript)
+概要: Y Combinator代表 Garry Tan が公開した Claude Codeのセットアップ。CEO・Designer・Eng Manager・Release Manager・Doc Engineer・QAの6役割を持つ23ツールで構成。Claude Codeに複数の専門役割エージェントを割り当てる「マルチロールOS」の実装例。
+収益化の可能性: このマルチロール構造を特定ドメインに転用した「ドメイン特化Claude Code OS」を教材・テンプレートとして販売。
+転用できそうな本質: Claude Codeに複数の専門役割を持たせるマルチロールOS構造。AI Income Lab内のエージェント拡充に直接応用できる。
+怪しい点・注意点: stars数は要確認（取得誤りの可能性あり）。URLを直接確認してから判断することを推奨。
+transfer_hint: Claude Codeに複数の専門役割を持たせるマルチロールOS構造。MT5分析OS・SEOコンテンツOS・Polymarket観察OSとして独自版を作り教材化。

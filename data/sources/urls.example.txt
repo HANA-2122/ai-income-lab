@@ -1,0 +1,35 @@
+# AI Income Lab — 手動URL収集の例
+# ============================================================
+# このファイルは記入例です。
+# 実際の収集は data/sources/urls.txt に貼り付けてください。
+# ============================================================
+
+# ── GitHub（高優先：コードとREADMEで本質が見えやすい）────────────
+# https://github.com/n8n-io/self-hosted-ai-starter-kit
+# https://github.com/ComposioHQ/awesome-claude-skills
+# https://github.com/enescingoz/awesome-n8n-templates
+# https://github.com/garrytan/gstack
+
+# ── Hacker News（Show HN / Ask HN が特に有用）────────────────────
+# https://news.ycombinator.com/item?id=40000000
+# https://news.ycombinator.com/item?id=40000001
+
+# ── X / Twitter（スクリーンショット付き・GitHubリンクあり優先）────
+# https://x.com/example_user/status/1234567890123456789
+
+# ── note / Zenn / ブログ（実装手順・収益報告があるもの）─────────
+# https://zenn.dev/example/articles/xxxxxxxxxxxx
+# https://note.com/example/n/xxxxxxxxxxxxxxxx
+
+# ── YouTube（概要欄にGitHubリンクがあるもの）────────────────────
+# https://www.youtube.com/watch?v=XXXXXXXXXXX
+
+# ============================================================
+# 収集のコツ：
+# ✅ GitHub URL がある → 証拠強度「高」になりやすい
+# ✅ Stars/Forks が多い → スコアが上がりやすい
+# ✅ 具体的な手順がある → 再現性が高く評価される
+# ❌ 「誰でも確実に稼げる」系 → 自動的に減点・赤フラグ
+# ❌ Telegram/LINE への誘導 → 赤フラグ検出
+# ❌ system prompt / leak / jailbreak 系 → 大幅減点
+# ============================================================

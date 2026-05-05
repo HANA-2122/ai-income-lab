@@ -1,0 +1,22 @@
+{
+  "name": "ai-income-lab",
+  "version": "2.3.6",
+  "description": "AI活用事例から収益化パターンを抽出し小実験に変換するローカルリサーチOS",
+  "main": "scripts/analyze.js",
+  "scripts": {
+    "demo":     "node scripts/run_demo.js",
+    "full":     "node scripts/collect_github.js && node scripts/collect_hn.js && node scripts/normalize_sources.js && node scripts/build_input_draft.js",
+    "daily":    "node scripts/evaluate_idea.js && node scripts/report.js && node scripts/idea.js",
+    "evaluate": "node scripts/evaluate_idea.js",
+    "collect":  "node scripts/collect_github.js && node scripts/collect_hn.js && node scripts/normalize_sources.js",
+    "input":    "node scripts/build_input_draft.js",
+    "report":   "node scripts/report.js",
+    "ideas":    "node scripts/idea.js",
+    "analyze":  "node scripts/analyze.js",
+    "fix":      "node scripts/evaluate_idea.js && node scripts/report.js && node scripts/idea.js"
+  },
+  "keywords": ["ai", "automation", "research", "claude-code", "starter-kit", "monetization"],
+  "author": "",
+  "license": "MIT",
+  "engines": { "node": ">=18.0.0" }
+}
