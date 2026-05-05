@@ -12,8 +12,9 @@
     "input":    "node scripts/build_input_draft.js",
     "report":   "node scripts/report.js",
     "ideas":    "node scripts/idea.js",
-    "analyze":  "node scripts/analyze.js",
-    "fix":      "node scripts/evaluate_idea.js && node scripts/report.js && node scripts/idea.js"
+    "analyze":       "node scripts/analyze.js",
+    "fix":           "node scripts/evaluate_idea.js && node scripts/report.js && node scripts/idea.js",
+    "browser-check": "node scripts/browser_check.js"
   },
   "keywords": ["ai", "automation", "research", "claude-code", "starter-kit", "monetization"],
   "author": "",

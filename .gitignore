@@ -43,6 +43,9 @@ scripts/evaluate_idea.v2.backup.js
 .env.*.local
 *.token
 
+# ── Claude Code ローカル設定（ユーザー固有・公開不要）──────────
+.claude/settings.local.json
+
 # ── OS・エディタ────────────────────────────────────────────
 .DS_Store
 Thumbs.db
