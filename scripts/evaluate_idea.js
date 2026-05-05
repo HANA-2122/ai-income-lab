@@ -117,9 +117,10 @@ function loadCategories() {
 
 // ── Input parser ───────────────────────────────────────────────
 function parseInput(content) {
-  return content.split(/\n---\n/).map(b => b.trim()).filter(b => b.length > 15)
+  // \r?\n---\r?\n で分割することで Windows CRLF にも対応
+  return content.split(/\r?\n---\r?\n/).map(b => b.trim()).filter(b => b.length > 15)
     .filter(b => {
-      const nonempty = b.split('\n').filter(l => l.trim());
+      const nonempty = b.split(/\r?\n/).filter(l => l.trim());
       return nonempty.some(l => !l.trim().startsWith('#'));
     })
     .map(parseBlock)
@@ -127,7 +128,8 @@ function parseInput(content) {
 }
 
 function parseBlock(block) {
-  const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+  // CRLF/LF 両対応
+  const lines = block.split(/\r?\n/).map(l => l.trim()).filter(l => l);
   if (!lines.length) return null;
   const bracketTitle = block.match(/^\[([^\]]+)\]/m);
   const title = bracketTitle ? bracketTitle[1].trim() : lines[0];
@@ -136,7 +138,7 @@ function parseBlock(block) {
   const body = block
     .replace(/^\[([^\]]+)\]\s*/m, '')
     .replace(urlMatch ? urlMatch[0] : '', '')
-    .split('\n').map(l => l.trim()).filter(l => l).join('\n');
+    .split(/\r?\n/).map(l => l.trim()).filter(l => l).join('\n');
   return { title, url, body, raw: block };
 }
 
