@@ -1,6 +1,6 @@
 {
   "name": "ai-income-lab",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "AI活用事例から収益化パターンを抽出し小実験に変換するローカルリサーチOS",
   "main": "scripts/analyze.js",
   "scripts": {
