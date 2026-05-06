@@ -57,8 +57,9 @@ desktop.ini
 node_modules/
 npm-debug.log*
 
-# ── ローカル実験フォルダ（公開前・販売準備前の実験用）─────────
+# ── ローカル実験フォルダ・商品開発フォルダ（公開前はローカル管理）──
 experiments/
+products/
 
 # ── 配布用リリースアーカイブ（git archive で都度生成する）────
 ai-income-lab-starter-kit-*.zip
